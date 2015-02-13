@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5945A2751A8EAD550065A752 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A2741A8EAD550065A752 /* main.m */; };
+		5945A2781A8EAD550065A752 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A2771A8EAD550065A752 /* AppDelegate.m */; };
+		5945A27B1A8EAD550065A752 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A27A1A8EAD550065A752 /* MasterViewController.m */; };
+		5945A27E1A8EAD550065A752 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A27D1A8EAD550065A752 /* DetailViewController.m */; };
+		5945A2811A8EAD550065A752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5945A27F1A8EAD550065A752 /* Main.storyboard */; };
+		5945A2831A8EAD550065A752 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5945A2821A8EAD550065A752 /* Images.xcassets */; };
+		5945A2861A8EAD550065A752 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5945A2841A8EAD550065A752 /* LaunchScreen.xib */; };
+		5945A2921A8EAD550065A752 /* GoogleNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A2911A8EAD550065A752 /* GoogleNewsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5945A28C1A8EAD550065A752 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5945A2671A8EAD550065A752 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5945A26E1A8EAD550065A752;
+			remoteInfo = GoogleNews;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5945A26F1A8EAD550065A752 /* GoogleNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5945A2731A8EAD550065A752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5945A2741A8EAD550065A752 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5945A2761A8EAD550065A752 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5945A2771A8EAD550065A752 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5945A2791A8EAD550065A752 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		5945A27A1A8EAD550065A752 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		5945A27C1A8EAD550065A752 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		5945A27D1A8EAD550065A752 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		5945A2801A8EAD550065A752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5945A2821A8EAD550065A752 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5945A2851A8EAD550065A752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5945A28B1A8EAD550065A752 /* GoogleNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5945A2901A8EAD550065A752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5945A2911A8EAD550065A752 /* GoogleNewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleNewsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5945A26C1A8EAD550065A752 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5945A2881A8EAD550065A752 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5945A2661A8EAD550065A752 = {
+			isa = PBXGroup;
+			children = (
+				5945A2711A8EAD550065A752 /* GoogleNews */,
+				5945A28E1A8EAD550065A752 /* GoogleNewsTests */,
+				5945A2701A8EAD550065A752 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5945A2701A8EAD550065A752 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5945A26F1A8EAD550065A752 /* GoogleNews.app */,
+				5945A28B1A8EAD550065A752 /* GoogleNewsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5945A2711A8EAD550065A752 /* GoogleNews */ = {
+			isa = PBXGroup;
+			children = (
+				5945A2761A8EAD550065A752 /* AppDelegate.h */,
+				5945A2771A8EAD550065A752 /* AppDelegate.m */,
+				5945A2791A8EAD550065A752 /* MasterViewController.h */,
+				5945A27A1A8EAD550065A752 /* MasterViewController.m */,
+				5945A27C1A8EAD550065A752 /* DetailViewController.h */,
+				5945A27D1A8EAD550065A752 /* DetailViewController.m */,
+				5945A27F1A8EAD550065A752 /* Main.storyboard */,
+				5945A2821A8EAD550065A752 /* Images.xcassets */,
+				5945A2841A8EAD550065A752 /* LaunchScreen.xib */,
+				5945A2721A8EAD550065A752 /* Supporting Files */,
+			);
+			path = GoogleNews;
+			sourceTree = "<group>";
+		};
+		5945A2721A8EAD550065A752 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5945A2731A8EAD550065A752 /* Info.plist */,
+				5945A2741A8EAD550065A752 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5945A28E1A8EAD550065A752 /* GoogleNewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				5945A2911A8EAD550065A752 /* GoogleNewsTests.m */,
+				5945A28F1A8EAD550065A752 /* Supporting Files */,
+			);
+			path = GoogleNewsTests;
+			sourceTree = "<group>";
+		};
+		5945A28F1A8EAD550065A752 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5945A2901A8EAD550065A752 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5945A26E1A8EAD550065A752 /* GoogleNews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5945A2951A8EAD550065A752 /* Build configuration list for PBXNativeTarget "GoogleNews" */;
+			buildPhases = (
+				5945A26B1A8EAD550065A752 /* Sources */,
+				5945A26C1A8EAD550065A752 /* Frameworks */,
+				5945A26D1A8EAD550065A752 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoogleNews;
+			productName = GoogleNews;
+			productReference = 5945A26F1A8EAD550065A752 /* GoogleNews.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5945A28A1A8EAD550065A752 /* GoogleNewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5945A2981A8EAD550065A752 /* Build configuration list for PBXNativeTarget "GoogleNewsTests" */;
+			buildPhases = (
+				5945A2871A8EAD550065A752 /* Sources */,
+				5945A2881A8EAD550065A752 /* Frameworks */,
+				5945A2891A8EAD550065A752 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5945A28D1A8EAD550065A752 /* PBXTargetDependency */,
+			);
+			name = GoogleNewsTests;
+			productName = GoogleNewsTests;
+			productReference = 5945A28B1A8EAD550065A752 /* GoogleNewsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5945A2671A8EAD550065A752 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Jocelyn;
+				TargetAttributes = {
+					5945A26E1A8EAD550065A752 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					5945A28A1A8EAD550065A752 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 5945A26E1A8EAD550065A752;
+					};
+				};
+			};
+			buildConfigurationList = 5945A26A1A8EAD550065A752 /* Build configuration list for PBXProject "GoogleNews" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5945A2661A8EAD550065A752;
+			productRefGroup = 5945A2701A8EAD550065A752 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5945A26E1A8EAD550065A752 /* GoogleNews */,
+				5945A28A1A8EAD550065A752 /* GoogleNewsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5945A26D1A8EAD550065A752 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5945A2811A8EAD550065A752 /* Main.storyboard in Resources */,
+				5945A2861A8EAD550065A752 /* LaunchScreen.xib in Resources */,
+				5945A2831A8EAD550065A752 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5945A2891A8EAD550065A752 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5945A26B1A8EAD550065A752 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5945A2781A8EAD550065A752 /* AppDelegate.m in Sources */,
+				5945A27B1A8EAD550065A752 /* MasterViewController.m in Sources */,
+				5945A2751A8EAD550065A752 /* main.m in Sources */,
+				5945A27E1A8EAD550065A752 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5945A2871A8EAD550065A752 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5945A2921A8EAD550065A752 /* GoogleNewsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5945A28D1A8EAD550065A752 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5945A26E1A8EAD550065A752 /* GoogleNews */;
+			targetProxy = 5945A28C1A8EAD550065A752 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5945A27F1A8EAD550065A752 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5945A2801A8EAD550065A752 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5945A2841A8EAD550065A752 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5945A2851A8EAD550065A752 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5945A2931A8EAD550065A752 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		5945A2941A8EAD550065A752 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5945A2961A8EAD550065A752 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GoogleNews/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5945A2971A8EAD550065A752 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GoogleNews/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5945A2991A8EAD550065A752 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GoogleNewsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoogleNews.app/GoogleNews";
+			};
+			name = Debug;
+		};
+		5945A29A1A8EAD550065A752 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GoogleNewsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoogleNews.app/GoogleNews";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5945A26A1A8EAD550065A752 /* Build configuration list for PBXProject "GoogleNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5945A2931A8EAD550065A752 /* Debug */,
+				5945A2941A8EAD550065A752 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5945A2951A8EAD550065A752 /* Build configuration list for PBXNativeTarget "GoogleNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5945A2961A8EAD550065A752 /* Debug */,
+				5945A2971A8EAD550065A752 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5945A2981A8EAD550065A752 /* Build configuration list for PBXNativeTarget "GoogleNewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5945A2991A8EAD550065A752 /* Debug */,
+				5945A29A1A8EAD550065A752 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5945A2671A8EAD550065A752 /* Project object */;
+}
