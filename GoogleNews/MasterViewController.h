@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
 
-
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray *topStories;
 @end
 

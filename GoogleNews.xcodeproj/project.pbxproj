@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CF05D051A914BCB00F279C3 /* BookMarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF05D041A914BCB00F279C3 /* BookMarkViewController.m */; };
 		5945A2751A8EAD550065A752 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A2741A8EAD550065A752 /* main.m */; };
 		5945A2781A8EAD550065A752 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A2771A8EAD550065A752 /* AppDelegate.m */; };
 		5945A27B1A8EAD550065A752 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A27A1A8EAD550065A752 /* MasterViewController.m */; };
 		5945A27E1A8EAD550065A752 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A27D1A8EAD550065A752 /* DetailViewController.m */; };
 		5945A2811A8EAD550065A752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5945A27F1A8EAD550065A752 /* Main.storyboard */; };
 		5945A2831A8EAD550065A752 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5945A2821A8EAD550065A752 /* Images.xcassets */; };
-		5945A2861A8EAD550065A752 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5945A2841A8EAD550065A752 /* LaunchScreen.xib */; };
 		5945A2921A8EAD550065A752 /* GoogleNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A2911A8EAD550065A752 /* GoogleNewsTests.m */; };
+		5945A29D1A8EE1250065A752 /* SharedNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A29C1A8EE1250065A752 /* SharedNetworking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C7BBA051A9122B8000B549D /* BookmarkToWebViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookmarkToWebViewDelegate.h; sourceTree = "<group>"; };
+		2CF05D031A914BCB00F279C3 /* BookMarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookMarkViewController.h; sourceTree = "<group>"; };
+		2CF05D041A914BCB00F279C3 /* BookMarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookMarkViewController.m; sourceTree = "<group>"; };
 		5945A26F1A8EAD550065A752 /* GoogleNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5945A2731A8EAD550065A752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5945A2741A8EAD550065A752 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -39,10 +43,11 @@
 		5945A27D1A8EAD550065A752 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		5945A2801A8EAD550065A752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5945A2821A8EAD550065A752 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5945A2851A8EAD550065A752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5945A28B1A8EAD550065A752 /* GoogleNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5945A2901A8EAD550065A752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5945A2911A8EAD550065A752 /* GoogleNewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleNewsTests.m; sourceTree = "<group>"; };
+		5945A29B1A8EE1250065A752 /* SharedNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedNetworking.h; sourceTree = "<group>"; };
+		5945A29C1A8EE1250065A752 /* SharedNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedNetworking.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,15 +89,19 @@
 		5945A2711A8EAD550065A752 /* GoogleNews */ = {
 			isa = PBXGroup;
 			children = (
+				2C7BBA051A9122B8000B549D /* BookmarkToWebViewDelegate.h */,
 				5945A2761A8EAD550065A752 /* AppDelegate.h */,
 				5945A2771A8EAD550065A752 /* AppDelegate.m */,
 				5945A2791A8EAD550065A752 /* MasterViewController.h */,
 				5945A27A1A8EAD550065A752 /* MasterViewController.m */,
+				5945A29B1A8EE1250065A752 /* SharedNetworking.h */,
+				5945A29C1A8EE1250065A752 /* SharedNetworking.m */,
 				5945A27C1A8EAD550065A752 /* DetailViewController.h */,
 				5945A27D1A8EAD550065A752 /* DetailViewController.m */,
 				5945A27F1A8EAD550065A752 /* Main.storyboard */,
+				2CF05D031A914BCB00F279C3 /* BookMarkViewController.h */,
+				2CF05D041A914BCB00F279C3 /* BookMarkViewController.m */,
 				5945A2821A8EAD550065A752 /* Images.xcassets */,
-				5945A2841A8EAD550065A752 /* LaunchScreen.xib */,
 				5945A2721A8EAD550065A752 /* Supporting Files */,
 			);
 			path = GoogleNews;
@@ -205,7 +214,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5945A2811A8EAD550065A752 /* Main.storyboard in Resources */,
-				5945A2861A8EAD550065A752 /* LaunchScreen.xib in Resources */,
 				5945A2831A8EAD550065A752 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,8 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF05D051A914BCB00F279C3 /* BookMarkViewController.m in Sources */,
 				5945A2781A8EAD550065A752 /* AppDelegate.m in Sources */,
 				5945A27B1A8EAD550065A752 /* MasterViewController.m in Sources */,
+				5945A29D1A8EE1250065A752 /* SharedNetworking.m in Sources */,
 				5945A2751A8EAD550065A752 /* main.m in Sources */,
 				5945A27E1A8EAD550065A752 /* DetailViewController.m in Sources */,
 			);
@@ -256,14 +266,6 @@
 				5945A2801A8EAD550065A752 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5945A2841A8EAD550065A752 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5945A2851A8EAD550065A752 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -420,6 +422,7 @@
 				5945A2971A8EAD550065A752 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5945A2981A8EAD550065A752 /* Build configuration list for PBXNativeTarget "GoogleNewsTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +431,7 @@
 				5945A29A1A8EAD550065A752 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,8 +7,14 @@
 //
 
 #import "DetailViewController.h"
+#import "BookmarkToWebViewDelegate.h"
+#import "BookMarkViewController.h"
+#import "MasterViewController.h"
 
 @interface DetailViewController ()
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *bookMark;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *fav;
 
 @end
 
@@ -16,31 +22,71 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem {
+- (void)setDetailItem:(NSDictionary *)newDetailItem {
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
-            
-        // Update the view.
         [self configureView];
     }
 }
 
 - (void)configureView {
-    // Update the user interface for the detail item.
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        NSURL *url = [NSURL URLWithString:self.detailItem[@"link"]];
+        [self.webView loadRequest:[NSURLRequest requestWithURL: url]];
     }
+}
+
+
+- (IBAction)favPressed:(id)sender {
+    [self performSegueWithIdentifier:@"MySeg" sender:_fav];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+  //  [self loadFirstNews];
+    [_fav setAction:@selector(favPressed:)];
     [self configureView];
 }
 
+//- (void)loadFirstNews {
+//    NSLog(@"loadFirstNews");
+//    NSURL *firstStory = [[_topNews objectAtIndex:0] objectForKey:@"link"];
+//    NSLog( @"url is %@", [firstStory absoluteString]);
+//    [self.webView loadRequest:[NSURLRequest requestWithURL:firstStory]];
+//}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+
+- (void)bookmark:(id)sender sendsURL:(NSURL *)url {
+    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if (sender == self.bookMark){
+        NSLog(@"bookmark");
+        BookMarkViewController *controller = (BookMarkViewController *)[segue destinationViewController];
+        [controller setDelegate:self];
+    } else if (sender == self.fav) {
+        NSLog(@"favourite");
+        if (_detailItem) {
+            BookMarkViewController *controller = (BookMarkViewController *)[segue destinationViewController];
+            [controller setDelegate:self];
+            [controller addBookMark:_detailItem];
+            
+        }
+    }
+}
+
+- (IBAction)sendTweet:(UIBarButtonItem *)sender {
+    SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    NSString *title = self.detailItem[@"title"];
+    NSString *url = self.detailItem[@"link"];
+    NSString *tweetContent = [NSString stringWithFormat:@"%@: %@", title, url];
+    [tweetSheet setInitialText:tweetContent];
+    [self presentViewController:tweetSheet animated:YES completion:nil];
 }
 
 @end
