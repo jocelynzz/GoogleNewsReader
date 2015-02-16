@@ -41,6 +41,9 @@ NSMutableString *title;
     [singleton getFeedForURL:@"http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=8&q=http%3A%2F%2Fnews.google.com%2Fnews%3Foutput%3Drss"
                      success:^(NSDictionary *dic, NSError *error) {
                          topStories =[[[dic objectForKey:@"responseData"] objectForKey:@"feed"] objectForKey:@"entries"];
+                         
+                         [[NSNotificationCenter defaultCenter]
+                          postNotificationName:@"firstNews" object:nil userInfo:[topStories objectAtIndex:0]];
                          //reload data instead of setNeedsplay, which is for init
                          [self.tableView reloadData];
                      }
@@ -52,6 +55,8 @@ NSMutableString *title;
         [self.refreshControl endRefreshing];
     }
 }
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

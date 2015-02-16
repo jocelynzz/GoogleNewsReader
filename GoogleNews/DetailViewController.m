@@ -28,6 +28,12 @@
     }
 }
 
+-(void) firstNews:(NSNotification *) notification {
+    NSString *URL =[[notification userInfo] objectForKey:@"link"];
+    NSURL *uRL = [[NSURL alloc] initWithString:URL];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:uRL]];
+}
+
 - (void)configureView {
     if (self.detailItem) {
         NSURL *url = [NSURL URLWithString:self.detailItem[@"link"]];
@@ -41,6 +47,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(firstNews:) name:@"firstNews" object:nil];
     [_fav setAction:@selector(favPressed:)];
     [self configureView];
 }
