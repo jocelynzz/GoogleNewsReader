@@ -33,13 +33,8 @@
 #pragma - Requests
 
 - (void)getFeedForURL:(NSString*)url
-<<<<<<< HEAD
               success:(void (^)(NSDictionary *dic, NSError *error))successCompletion
               failure:(void (^)(void))failureCompletion
-=======
-                 success:(void (^)(NSDictionary *dic, NSError *error))successCompletion
-                 failure:(void (^)(void))failureCompletion
->>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
 {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [[[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:url]
@@ -48,32 +43,20 @@
                                                      NSError *error) {
                                      
                                      // handle response
-<<<<<<< HEAD
                                      //                                     NSLog(@"Data:%@",data);
                                      //                                     NSLog(@"Response:%@",response);
                                      //                                     NSLog(@"Error:%@",[error localizedDescription]);
-=======
-//                                     NSLog(@"Data:%@",data);
-//                                     NSLog(@"Response:%@",response);
-//                                     NSLog(@"Error:%@",[error localizedDescription]);
->>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
                                      
                                      NSHTTPURLResponse *httpResp = (NSHTTPURLResponse*) response;
                                      if (httpResp.statusCode == 200) {
                                          NSError *jsonError;
                                          
                                          NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
-<<<<<<< HEAD
                                          //                                         NSLog(@"DownloadeData:%@ \n--- ",dic);
                                          [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
                                          dispatch_async(dispatch_get_main_queue(), ^{
                                              successCompletion(dic,nil);
                                          });
-=======
-//                                         NSLog(@"DownloadeData:%@ \n--- ",dic);
-                                         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-                                         successCompletion(dic,nil);
->>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
                                      } else {
                                          NSLog(@"Fail Not 200:");
                                          dispatch_async(dispatch_get_main_queue(), ^{
