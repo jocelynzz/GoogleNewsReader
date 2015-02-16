@@ -8,13 +8,20 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "SharedNetworking.h"
 
-@interface MasterViewController ()
+@interface MasterViewController () {
+NSArray *topStories;
+NSMutableDictionary *link;
+NSMutableString *title;
 
+}
 @property NSMutableArray *objects;
+@property (strong,nonatomic) NSMutableArray *issueData;
 @end
 
 @implementation MasterViewController
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -22,73 +29,106 @@
     self.preferredContentSize = CGSizeMake(320.0, 600.0);
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"download starts");
+    [self downloadStories];
+    
+}
+
+-(void)downloadStories {
+    
+    SharedNetworking *singleton = [SharedNetworking sharedNetworking];
+    [singleton getFeedForURL:@"http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=8&q=http%3A%2F%2Fnews.google.com%2Fnews%3Foutput%3Drss"
+                     success:^(NSDictionary *dic, NSError *error) {
+                         topStories =[[[dic objectForKey:@"responseData"] objectForKey:@"feed"] objectForKey:@"entries"];
+                         //reload data instead of setNeedsplay, which is for init
+                         [self.tableView reloadData];
+                     }
+                     failure:^(){
+                         [self showAlert];
+                         return;
+                     }];
+    if (self.refreshControl) {
+        [self.refreshControl endRefreshing];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+  //  refresh control
+    UIRefreshControl *pullToRefresh = [[UIRefreshControl alloc] init];
+    pullToRefresh.tintColor = [UIColor blueColor];
+    [pullToRefresh addTarget:self action:@selector(refreshAction) forControlEvents: UIControlEventValueChanged];
+    self.refreshControl = pullToRefresh;
+    topStories = [topStories init];
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
-    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+}
+
+
+- (void)refreshAction {
+    NSLog(@"Pull to refresh action");
+    [self downloadStories];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
-- (void)insertNewObject:(id)sender {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
-    }
-    [self.objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-}
 
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
+        NSDictionary *story = [topStories objectAtIndex:indexPath.row];
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-        [controller setDetailItem:object];
+        [controller setDetailItem:story];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
     }
 }
 
-#pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;
+    return topStories.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    NSLog(@"%@", [topStories objectAtIndex:indexPath.row]);
+    NSString *story = [[topStories objectAtIndex:indexPath.row] objectForKey:@"title"];
+    NSString *detail = [[topStories objectAtIndex:indexPath.row] objectForKey:@"contentSnippet"];
+    NSString *pDate = [[topStories objectAtIndex:indexPath.row] objectForKey:@"publishedDate"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEE,dd MMM yyyy HH:mm:ss ZZZ"];
+    NSDate *date  = [dateFormatter dateFromString:pDate];
+    
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *newDate = [dateFormatter stringFromDate:date];
+    cell.textLabel.text = story;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@  %@", newDate, detail];
     return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
+- (void)showAlert {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
+                                                    message:@"Failed To Connect"
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+
 }
+
 
 @end

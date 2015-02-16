@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BookmarkToWebViewDelegate.h"
+#import "Social/Social.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController <BookmarkToWebViewDelegate>
 
-@property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+//@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) NSDictionary *detailItem;
+//@property (copy, nonatomic) NSString *url;
+
 
 @end
 
