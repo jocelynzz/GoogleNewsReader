@@ -15,6 +15,10 @@
 @property (strong, nonatomic) DetailViewController *detailViewController;
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+<<<<<<< HEAD
 
+=======
+@property (strong, nonatomic) NSArray *topStories;
+>>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
 @end
 

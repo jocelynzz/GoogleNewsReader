@@ -11,6 +11,7 @@
 #import "SharedNetworking.h"
 
 @interface MasterViewController () {
+<<<<<<< HEAD
 NSArray *topStories;
 NSMutableDictionary *link;
 NSMutableString *title;
@@ -18,6 +19,13 @@ NSMutableString *title;
 }
 @property NSMutableArray *objects;
 @property (strong,nonatomic) NSMutableArray *issueData;
+=======
+NSMutableDictionary *link;
+NSMutableString *title;
+
+}
+
+>>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
 @end
 
 @implementation MasterViewController
@@ -32,6 +40,7 @@ NSMutableString *title;
 - (void)viewWillAppear:(BOOL)animated {
     NSLog(@"download starts");
     [self downloadStories];
+<<<<<<< HEAD
     
 }
 
@@ -48,11 +57,37 @@ NSMutableString *title;
                          [self showAlert];
                          return;
                      }];
+=======
+    //[self passTopNews];
+}
+
+
+-(void)downloadStories {
+    
+    SharedNetworking *singleton = [SharedNetworking sharedNetworking];
+    [singleton getFeedForURL:@"http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=8&q=http%3A%2F%2Fnews.google.com%2Fnews%3Foutput%3Drss" success:^(NSDictionary *dic, NSError *error) {
+        _topStories =[[[dic objectForKey:@"responseData"] objectForKey:@"feed"] objectForKey:@"entries"];
+        [self.tableView setNeedsDisplay];
+    } failure:^(){
+        [self showAlert];
+        return;
+    }];
+>>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
     if (self.refreshControl) {
         [self.refreshControl endRefreshing];
     }
 }
 
+<<<<<<< HEAD
+=======
+- (void)passTopNews {
+    DetailViewController *viewController = [[DetailViewController alloc] init];
+    viewController.topNews = _topStories;
+    [self.navigationController
+     pushViewController:viewController animated:NO];
+}
+
+>>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
 - (void)viewDidLoad {
     [super viewDidLoad];
   //  refresh control
@@ -60,11 +95,19 @@ NSMutableString *title;
     pullToRefresh.tintColor = [UIColor blueColor];
     [pullToRefresh addTarget:self action:@selector(refreshAction) forControlEvents: UIControlEventValueChanged];
     self.refreshControl = pullToRefresh;
+<<<<<<< HEAD
     topStories = [topStories init];
 
 }
 
 
+=======
+    _topStories = [_topStories init];
+
+}
+
+
+>>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
 - (void)refreshAction {
     NSLog(@"Pull to refresh action");
     [self downloadStories];
@@ -81,7 +124,11 @@ NSMutableString *title;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+<<<<<<< HEAD
         NSDictionary *story = [topStories objectAtIndex:indexPath.row];
+=======
+        NSDictionary *story = [_topStories objectAtIndex:indexPath.row];
+>>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
         [controller setDetailItem:story];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
@@ -95,6 +142,7 @@ NSMutableString *title;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+<<<<<<< HEAD
     return topStories.count;
 }
 
@@ -109,6 +157,22 @@ NSMutableString *title;
     [dateFormatter setDateFormat:@"EEE,dd MMM yyyy HH:mm:ss ZZZ"];
     NSDate *date  = [dateFormatter dateFromString:pDate];
     
+=======
+    return _topStories.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+   
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    NSLog(@"%@", [_topStories objectAtIndex:indexPath.row]);
+    NSString *story = [[_topStories objectAtIndex:indexPath.row] objectForKey:@"title"];
+    NSString *detail = [[_topStories objectAtIndex:indexPath.row] objectForKey:@"contentSnippet"];
+    NSString *pDate = [[_topStories objectAtIndex:indexPath.row] objectForKey:@"publishedDate"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEE,dd MMM yyyy HH:mm:ss ZZZ"];
+    NSDate *date  = [dateFormatter dateFromString:pDate];
+
+>>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     NSString *newDate = [dateFormatter stringFromDate:date];
     cell.textLabel.text = story;

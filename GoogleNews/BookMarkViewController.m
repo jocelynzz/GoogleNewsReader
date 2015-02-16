@@ -2,13 +2,22 @@
 //  BookMarkViewController.m
 //  GoogleNews
 //
+<<<<<<< HEAD
 //  Created by Jocelyn Zhang on 2/15/15.
+=======
+//  Created by Jocelyn on 2/15/15.
+>>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
 //  Copyright (c) 2015 Jocelyn. All rights reserved.
 //
 
 #import "BookMarkViewController.h"
 #import "BookmarkToWebViewDelegate.h"
 
+<<<<<<< HEAD
+=======
+//swipe left to edit/delete favs
+
+>>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
 @interface BookMarkViewController ()
 @property (strong,nonatomic)NSMutableArray *bookmarks;
 @property (weak) id <BookmarkToWebViewDelegate> dataReceiver;
@@ -48,29 +57,41 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+<<<<<<< HEAD
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+=======
+>>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+<<<<<<< HEAD
     // Dispose of any resources that can be recreated.
+=======
+>>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+<<<<<<< HEAD
 
     // Return the number of sections.
+=======
+>>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+<<<<<<< HEAD
 
     // Return the number of rows in the section.
+=======
+>>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
     return [_bookmarks count];
 }
 

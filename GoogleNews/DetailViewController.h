@@ -11,12 +11,19 @@
 #import "Social/Social.h"
 
 @interface DetailViewController : UIViewController <BookmarkToWebViewDelegate>
+<<<<<<< HEAD
 
 //@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) NSDictionary *detailItem;
 //@property (copy, nonatomic) NSString *url;
 
+=======
+
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) NSDictionary *detailItem;
+@property(strong, nonatomic) NSArray *topNews;
+>>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
 
 @end
 

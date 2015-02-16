@@ -9,6 +9,10 @@
 #import "DetailViewController.h"
 #import "BookmarkToWebViewDelegate.h"
 #import "BookMarkViewController.h"
+<<<<<<< HEAD
+=======
+#import "MasterViewController.h"
+>>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
 
 @interface DetailViewController ()
 
@@ -35,20 +39,39 @@
     }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
 - (IBAction)favPressed:(id)sender {
     [self performSegueWithIdentifier:@"MySeg" sender:_fav];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+<<<<<<< HEAD
+=======
+  //  [self loadFirstNews];
+>>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
     [_fav setAction:@selector(favPressed:)];
     [self configureView];
 }
+
+//- (void)loadFirstNews {
+//    NSLog(@"loadFirstNews");
+//    NSURL *firstStory = [[_topNews objectAtIndex:0] objectForKey:@"link"];
+//    NSLog( @"url is %@", [firstStory absoluteString]);
+//    [self.webView loadRequest:[NSURLRequest requestWithURL:firstStory]];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b37e938d3f751438909f1ab15b173752e92a54c1
 - (void)bookmark:(id)sender sendsURL:(NSURL *)url {
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
