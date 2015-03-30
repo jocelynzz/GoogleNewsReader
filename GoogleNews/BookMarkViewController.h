@@ -12,5 +12,4 @@
 
 -(void)addBookMark:(NSDictionary*)bookmark;
 -(void)setDelegate:(id)delegate;
-//- (IBAction) EditTable:(id)sender;
 @end

@@ -11,7 +11,8 @@
 
 @protocol BookmarkToWebViewDelegate <NSObject>
 @required
-- (void)bookmark:(id)sender sendsURL:(NSURL*)url;
+
+- (void)bookmark:(id)sender sendsURL:(NSDictionary*)urlDict;
 @end
 
 #endif

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C88A8951A9A90240066967F /* Bookmarks.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C88A8941A9A90240066967F /* Bookmarks.m */; };
 		2CF05D051A914BCB00F279C3 /* BookMarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF05D041A914BCB00F279C3 /* BookMarkViewController.m */; };
+		590969421A98186000736FAD /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 590969411A98186000736FAD /* SplashScreenViewController.m */; };
 		5945A2751A8EAD550065A752 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A2741A8EAD550065A752 /* main.m */; };
 		5945A2781A8EAD550065A752 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A2771A8EAD550065A752 /* AppDelegate.m */; };
 		5945A27B1A8EAD550065A752 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A27A1A8EAD550065A752 /* MasterViewController.m */; };
@@ -16,6 +18,10 @@
 		5945A2831A8EAD550065A752 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5945A2821A8EAD550065A752 /* Images.xcassets */; };
 		5945A2921A8EAD550065A752 /* GoogleNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A2911A8EAD550065A752 /* GoogleNewsTests.m */; };
 		5945A29D1A8EE1250065A752 /* SharedNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5945A29C1A8EE1250065A752 /* SharedNetworking.m */; };
+		5957CB411A9AB791006E4F31 /* MasterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5957CB401A9AB791006E4F31 /* MasterCell.m */; };
+		598D78C71A9BA49200A8C696 /* MasterLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D78C61A9BA49200A8C696 /* MasterLabel.m */; };
+		59CCB4331A96EC3700120AAE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 59CCB4321A96EC3700120AAE /* Settings.bundle */; };
+		59DA7A101A992163001175DE /* UIStyleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DA7A0F1A992163001175DE /* UIStyleController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,8 +36,12 @@
 
 /* Begin PBXFileReference section */
 		2C7BBA051A9122B8000B549D /* BookmarkToWebViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookmarkToWebViewDelegate.h; sourceTree = "<group>"; };
+		2C88A8931A9A90240066967F /* Bookmarks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bookmarks.h; sourceTree = "<group>"; };
+		2C88A8941A9A90240066967F /* Bookmarks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bookmarks.m; sourceTree = "<group>"; };
 		2CF05D031A914BCB00F279C3 /* BookMarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookMarkViewController.h; sourceTree = "<group>"; };
 		2CF05D041A914BCB00F279C3 /* BookMarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookMarkViewController.m; sourceTree = "<group>"; };
+		590969401A98185F00736FAD /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
+		590969411A98186000736FAD /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
 		5945A26F1A8EAD550065A752 /* GoogleNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5945A2731A8EAD550065A752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5945A2741A8EAD550065A752 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,6 +58,13 @@
 		5945A2911A8EAD550065A752 /* GoogleNewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleNewsTests.m; sourceTree = "<group>"; };
 		5945A29B1A8EE1250065A752 /* SharedNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedNetworking.h; sourceTree = "<group>"; };
 		5945A29C1A8EE1250065A752 /* SharedNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedNetworking.m; sourceTree = "<group>"; };
+		5957CB3F1A9AB791006E4F31 /* MasterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterCell.h; sourceTree = "<group>"; };
+		5957CB401A9AB791006E4F31 /* MasterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterCell.m; sourceTree = "<group>"; };
+		598D78C51A9BA49200A8C696 /* MasterLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterLabel.h; sourceTree = "<group>"; };
+		598D78C61A9BA49200A8C696 /* MasterLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterLabel.m; sourceTree = "<group>"; };
+		59CCB4321A96EC3700120AAE /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		59DA7A0E1A992163001175DE /* UIStyleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIStyleController.h; sourceTree = "<group>"; };
+		59DA7A0F1A992163001175DE /* UIStyleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIStyleController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,19 +106,26 @@
 		5945A2711A8EAD550065A752 /* GoogleNews */ = {
 			isa = PBXGroup;
 			children = (
+				2C88A8931A9A90240066967F /* Bookmarks.h */,
+				2C88A8941A9A90240066967F /* Bookmarks.m */,
+				59CCB4341A96EC4300120AAE /* Singleton */,
 				2C7BBA051A9122B8000B549D /* BookmarkToWebViewDelegate.h */,
-				5945A2761A8EAD550065A752 /* AppDelegate.h */,
-				5945A2771A8EAD550065A752 /* AppDelegate.m */,
 				5945A2791A8EAD550065A752 /* MasterViewController.h */,
 				5945A27A1A8EAD550065A752 /* MasterViewController.m */,
-				5945A29B1A8EE1250065A752 /* SharedNetworking.h */,
-				5945A29C1A8EE1250065A752 /* SharedNetworking.m */,
 				5945A27C1A8EAD550065A752 /* DetailViewController.h */,
 				5945A27D1A8EAD550065A752 /* DetailViewController.m */,
+				5957CB3F1A9AB791006E4F31 /* MasterCell.h */,
+				5957CB401A9AB791006E4F31 /* MasterCell.m */,
 				5945A27F1A8EAD550065A752 /* Main.storyboard */,
+				59DA7A0E1A992163001175DE /* UIStyleController.h */,
+				59DA7A0F1A992163001175DE /* UIStyleController.m */,
 				2CF05D031A914BCB00F279C3 /* BookMarkViewController.h */,
 				2CF05D041A914BCB00F279C3 /* BookMarkViewController.m */,
+				590969401A98185F00736FAD /* SplashScreenViewController.h */,
+				590969411A98186000736FAD /* SplashScreenViewController.m */,
 				5945A2821A8EAD550065A752 /* Images.xcassets */,
+				598D78C51A9BA49200A8C696 /* MasterLabel.h */,
+				598D78C61A9BA49200A8C696 /* MasterLabel.m */,
 				5945A2721A8EAD550065A752 /* Supporting Files */,
 			);
 			path = GoogleNews;
@@ -110,7 +134,10 @@
 		5945A2721A8EAD550065A752 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				59CCB4321A96EC3700120AAE /* Settings.bundle */,
 				5945A2731A8EAD550065A752 /* Info.plist */,
+				5945A2761A8EAD550065A752 /* AppDelegate.h */,
+				5945A2771A8EAD550065A752 /* AppDelegate.m */,
 				5945A2741A8EAD550065A752 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -131,6 +158,15 @@
 				5945A2901A8EAD550065A752 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59CCB4341A96EC4300120AAE /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				5945A29C1A8EE1250065A752 /* SharedNetworking.m */,
+				5945A29B1A8EE1250065A752 /* SharedNetworking.h */,
+			);
+			name = Singleton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5945A2811A8EAD550065A752 /* Main.storyboard in Resources */,
+				59CCB4331A96EC3700120AAE /* Settings.bundle in Resources */,
 				5945A2831A8EAD550065A752 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,7 +270,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CF05D051A914BCB00F279C3 /* BookMarkViewController.m in Sources */,
+				59DA7A101A992163001175DE /* UIStyleController.m in Sources */,
+				590969421A98186000736FAD /* SplashScreenViewController.m in Sources */,
+				2C88A8951A9A90240066967F /* Bookmarks.m in Sources */,
 				5945A2781A8EAD550065A752 /* AppDelegate.m in Sources */,
+				598D78C71A9BA49200A8C696 /* MasterLabel.m in Sources */,
+				5957CB411A9AB791006E4F31 /* MasterCell.m in Sources */,
 				5945A27B1A8EAD550065A752 /* MasterViewController.m in Sources */,
 				5945A29D1A8EE1250065A752 /* SharedNetworking.m in Sources */,
 				5945A2751A8EAD550065A752 /* main.m in Sources */,
@@ -353,9 +395,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = GoogleNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -363,9 +407,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = GoogleNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

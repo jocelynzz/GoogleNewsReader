@@ -42,17 +42,12 @@
                                                      NSURLResponse *response,
                                                      NSError *error) {
                                      
-                                     // handle response
-                                     //                                     NSLog(@"Data:%@",data);
-                                     //                                     NSLog(@"Response:%@",response);
-                                     //                                     NSLog(@"Error:%@",[error localizedDescription]);
-                                     
+
                                      NSHTTPURLResponse *httpResp = (NSHTTPURLResponse*) response;
                                      if (httpResp.statusCode == 200) {
                                          NSError *jsonError;
                                          
                                          NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
-                                         //                                         NSLog(@"DownloadeData:%@ \n--- ",dic);
                                          [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
                                          dispatch_async(dispatch_get_main_queue(), ^{
                                              successCompletion(dic,nil);
@@ -65,4 +60,14 @@
                                      }
                                  }] resume];
 }
+
+//- (void)showAlert {
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
+//                                                    message:@"Failed To Connect"
+//                                                   delegate:self
+//                                          cancelButtonTitle:@"OK"
+//                                          otherButtonTitles:nil];
+//    [alert show];
+//
+//}
 @end

@@ -9,14 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "BookmarkToWebViewDelegate.h"
 #import "Social/Social.h"
+#import "SplashScreenViewController.h"
 
-@interface DetailViewController : UIViewController <BookmarkToWebViewDelegate>
+@interface DetailViewController : UIViewController <BookmarkToWebViewDelegate, UIWebViewDelegate,UIPopoverPresentationControllerDelegate>
 
-//@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) NSDictionary *detailItem;
-//@property (copy, nonatomic) NSString *url;
-
-
+@property (weak, nonatomic) IBOutlet UIImageView *star;
+//@property (weak, nonatomic) SplashScreenViewController *splashScreen;
+@property (nonatomic, retain) UIActivityIndicatorView *activityIndicatorObject;
+@property (nonatomic, retain) UILabel *loadingLabel;
+@property (strong, nonatomic) UIView *UIView;
+@property(nonatomic) BOOL masterDownloaded;
 @end
 

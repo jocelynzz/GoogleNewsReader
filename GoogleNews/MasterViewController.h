@@ -15,6 +15,7 @@
 @property (strong, nonatomic) DetailViewController *detailViewController;
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UINavigationItem *stories;
+@property(nonatomic) BOOL viewDownloaded;
 
 @end
-
